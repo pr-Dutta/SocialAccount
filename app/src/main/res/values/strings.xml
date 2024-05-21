@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SocialAccount</string>
+    <string name="default_web_client_id">149375041890-0e5kc7h8364tlb24islvt0u1lvqtqvq1.apps.googleusercontent.com</string>
 </resources>

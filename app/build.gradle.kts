@@ -61,10 +61,10 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     // Feature module Support
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
+    //implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
 
     // Testing Navigation
-    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+    //androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
 
     // Jetpack Compose Integration
     implementation("androidx.navigation:navigation-compose:$nav_version")
@@ -87,7 +87,16 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    // for OTP authentication
+    // Import the BoM for the Firebase platform
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-auth")
+
+    // Also add the dependency for the Google Play services library and specify its version
+    implementation("com.google.android.gms:play-services-auth:21.1.1")
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    implementation("com.google.firebase:firebase-analytics")
 }
